@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Lato;
+}
+
+body {
+    background: #e6e8e6;
+    background: url("https://unsplash.it/1600/1300/?landscape");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:#424242d0;
+    width: 500px;             
+    height: 400px;
+    border-radius: 2rem;
+}
+
+.search {
+    position: absolute;
+    width: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.search-bar {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 5px;
+    background: #fff;
+    opacity: 0.9;
+    outline: none;
+    text-align: center;
+}
+
+.search-bar input:hover {
+    background: #fff;
+    opacity: 10;
+}
+
+button {
+    display: flex;
+    border-radius: 2rem;
+    padding: 12.5px;
+    border: none;
+    outline: none;
+    background: #fff;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.weather h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.temp {
+    font-size: 35px;
+}
+
+.description, .humidity, .wind {
+    font-size: 15px;
+    padding: 3px;
+}
+.weather {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+
+
+
+.search-bar img {
+padding-top: 2px;
+margin-right: 10px;
+width: 1.5rem;
+height: 1.5rem;
+opacity: 0.7;
+cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+}
+
+@media(max-width: 700px) {
+    body {
+        background-size: auto;
+    }
+
+    .card {
+        width: 450px;
+        height: 350px;
+    }
+
+    .search {
+        width: 450px;
+        
+    }
+
+    .search-bar {
+        width: 250px;
+        height: 35px;
+        opacity: 0.9;
+    }
+
+    .weather {
+        margin-top: 30px;
+    }
+
+    .weather h2 {
+        font-size: 15px;
+    }
+
+    .temp {
+        font-size: 30px;
+        margin: 5px;
+    }
+  }
+
+
+
+
+
+  .weather.loading {
+      visibility: hidden;
+      max-height: 20px;
+      position: relative;
+  }
+
+  .weather.loading:after {
+      visibility: visible;
+      content: "Loading...";
+      color: white;
+      position: absolute;
+      top: 0;
+      justify-content: center;
+  }
+
+  .description {
+      text-transform: capitalize;
+  }
